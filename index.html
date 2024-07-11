@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tardu Orhan | Contacts</title>
+    <!-- materialize icons, css & js -->
+    <link type="text/css" href="css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="css/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="img/icons/icon-96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#00695c">
+    <meta name="theme-color" content="#00695c">
+    <!-- Firebase -->
+    <script type="module" src="js/config.js"></script>
+</head>
+<body class="teal lighten-5">
+    <!-- top nav -->
+    <nav class="z-depth-0">
+        <div class="nav-wrapper container">
+            <span class="left grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+            <a class="right" href="/">TOR<span>Contacts</span></a>
+        </div>
+    </nav>
+
+    <!-- side nav -->
+    <ul id="side-menu" class="sidenav side-menu" style="cursor: pointer;">
+        <li><a class="subheader">TOR Contacts</a></li>
+        <li><a href="/" class="waves-effect">Home</a></li>
+        <li><a href="pages/liste.html" class="waves-effect">Liste</a></li>
+        <li><a href="pages/konum.html" class="waves-effect">Konum</a></li>
+        <li><a href="pages/about.html" class="waves-effect">Hakkımızda</a></li>
+    </ul>
+
+    <!-- contacts -->
+    <div class="contacts container grey-text text-darken-1">
+        <h4>Contacts</h4>
+    </div>
+
+    <div class="center">
+        <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+    <!-- add contact side nav -->
+    <div id="side-form" class="sidenav side-form">
+        <form class="add-contact container section">
+            <h6>Yeni</h6>
+            <div class="divider"></div>
+            <div class="input-field">
+                <input placeholder="Adı" id="name" type="text" class="validate">
+                <label for="name">Adı</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="(...)......." id="number" type="text" class="validate">
+                <label for="number">Numarası</label>
+            </div>
+            <div class="input-field center">
+                <button class="btn-small" type="submit">ekle</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/db.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

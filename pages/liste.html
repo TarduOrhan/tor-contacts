@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TOR Contacts</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="../css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="../css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="module" src="../js/config.js"></script>
+  <script type="module" src="../js/liste.js"></script>
+
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <span class="left grey-text text-darken-1">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+      <a class="right" href="/">TOR<span>Contacts</span></a>
+      
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">TORCONTACT</a></li>
+    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="liste.html" class="waves-effect">Liste</a></li>
+    <li><a href="konum.html" class="waves-effect">Konum</a></li>
+    <li><a href="about.html" class="waves-effect">Hakkımızda</a></li> 
+  </ul>
+  <h4>Liste</h4>
+       <!-- Filtreleme input alanı -->
+    <div class="container">
+        <input type="text" id="name-filter" placeholder="Name filter...">
+    </div>
+<!-- Tablo için container -->
+<div class="container">
+    <table id="contacts-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="contacts-table-body">
+            <!-- Veriler dinamik olarak buraya eklenecek -->
+        </tbody>
+    </table>
+</div>
+ <!-- Düzenleme Formu Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h5>Düzenle</h5>
+            <form id="edit-form">
+                <input type="hidden" id="edit-id">
+                <div class="input-field">
+                    <input type="text" id="edit-name" placeholder="İsim">
+                    <label for="edit-name">İsim</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="edit-number" placeholder="Numara">
+                    <label for="edit-number">Numara</label>
+                </div>
+                <button type="submit" class="btn">Kaydet</button>
+                <button type="button" class="btn red modal-close">İptal</button>
+            </form>
+        </div>
+    </div>
+
+ 
+  <div class="center">
+    <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" href="/" >
+      <i class="material-icons">home</i>
+    </a>
+  </div>
+  <script src="../js/common.js"></script>
+  
+      <!-- Modalı başlat -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var modals = document.querySelectorAll('.modal');
+        M.Modal.init(modals);
+    });
+</script>
+
+</body>
+</html>
